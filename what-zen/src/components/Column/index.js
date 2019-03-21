@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Card from './Card'
-import AddCardForm from './AddCardForm'
-import '../styles/column.css'
+import Card from '../Card/index'
+import AddCardForm from '../AddCardForm/index'
+import './column.css'
 
 class Column extends Component {
   state = {

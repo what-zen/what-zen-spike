@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import '../styles/card.css'
+import './card.css'
 
 class Card extends Component {
   constructor(props) {
     super(props);
     console.log(props);
   }
-  
+
   render() {
     return (
       <div className="Card">
