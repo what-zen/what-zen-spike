@@ -1,0 +1,7 @@
+div.Column {
+  background-color: lightblue;
+  width: 500px;
+  height: 90vh;
+  margin: auto;
+  margin-top: 5px;
+}
