@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import Card from './Card'
+import AddCardForm from './AddCardForm'
 import '../styles/column.css'
 
 class Column extends Component {
   state = {
     cards: [
-      {id: 1, text: 'a'},
-      {id: 2, text: 'b'},
-      {id: 3, text: 'c'},
-      {id: 4, text: 'd'},
+      {id: 1, body: 'a'},
+      {id: 2, body: 'b'},
+      {id: 3, body: 'c'},
+      {id: 4, body: 'd'},
     ]
   }
 
   render() {
     return (
       <div className="Column">
-        {this.state.cards.map(card => <Card key={card.id} text={card.text}/>)}
+        <AddCardForm></AddCardForm>
+        {this.state.cards.map(card => <Card key={card.id} text={card.body}/>)}
       </div>
     );
   }
