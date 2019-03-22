@@ -3,4 +3,8 @@
     "what-zen-tut": "what-zen-tut",
     "default": "what-zen-tut"
   }
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
 }
