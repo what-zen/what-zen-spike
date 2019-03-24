@@ -9,11 +9,6 @@ class AddCardFormBase extends Component {
   handleAddCard = () => {
     console.log("buttone was clickled")
     const id = 1
-    console.log(this)
-    console.log(this.props)
-    this.props.firebase.db().ref('test-table/' + id).set({
-      testfact: 'hello'
-    });
   }
 
   render() {

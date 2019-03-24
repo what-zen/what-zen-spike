@@ -32,6 +32,7 @@ class SignUpFormBase extends Component {
     const { username, email, passwordOne } = this.state;
 
     this.props.firebase
+        // Creates a user in the Firebase authentication database
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
         // Creates a user in the Firebase realtime database
@@ -75,13 +76,15 @@ class SignUpFormBase extends Component {
     return (
       <form onSubmit={this.onSubmit}>
         <input
+          id="usernameInput"
           name="username"
           value={username}
           onChange={this.onChange}
           type="text"
-          placeholder="Full Name"
+          placeholder="Username"
         />
         <input
+          id="emailInput"
           name="email"
           value={email}
           onChange={this.onChange}
@@ -89,6 +92,7 @@ class SignUpFormBase extends Component {
           placeholder="Email Address"
         />
         <input
+          id="passwordInput"
           name="passwordOne"
           value={passwordOne}
           onChange={this.onChange}
@@ -96,6 +100,7 @@ class SignUpFormBase extends Component {
           placeholder="Password"
         />
         <input
+          id="passwordConfirmation"
           name="passwordTwo"
           value={passwordTwo}
           onChange={this.onChange}
@@ -113,7 +118,7 @@ class SignUpFormBase extends Component {
 
 const SignUpLink = () => (
   <p>
-    Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+    Don't have an account? <Link to={ROUTES.SIGN_UP} id='signUpPageLink'>Sign Up</Link>
   </p>
 );
 
